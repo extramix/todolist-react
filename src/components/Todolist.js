@@ -1,8 +1,8 @@
 import React from 'react'
+import Todo from './Todo'
+export default function Todolists({todolists, handleToggle}) {
 
-export default function Header() {
-
-    const todolists = ['Finish pancakes', 'Do laundry', 'Add navbar']
+    // const todolists = ['Finish pancakes', 'Do laundry', 'Add navbar']
 
     return (
         <div className="grid grid-flow-col font-serif">
@@ -11,7 +11,7 @@ export default function Header() {
             <h1 className="text-7xl mb-5">To-do list</h1>
 
         {todolists.map((list) => {
-            return <li>{list}</li>
+            return (<Todo todo={list} handleToggle={handleToggle}/>)
         })}
 
         </div>
