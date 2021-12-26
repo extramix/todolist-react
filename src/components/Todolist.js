@@ -2,8 +2,6 @@ import React from 'react'
 import Todo from './Todo'
 export default function Todolists({todolists, handleToggle}) {
 
-    // const todolists = ['Finish pancakes', 'Do laundry', 'Add navbar']
-
     return (
         <div className="grid grid-flow-col font-serif">
             <div></div>

@@ -7,9 +7,9 @@ export default function Todo({todo, handleToggle}) {
         handleToggle(e.currentTarget.id)
     }
     return (
-        <div>
-            <p className={(todo.complete? "cursor-pointer line-through text-gray-500" : "cursor-pointer")}
-            key ={todo.id} onClick={handleClick}>{todo.task}</p>
-        </div>
+
+            <p className={(todo.complete? "cursor-pointer line-through text-gray-500 select-none" : "cursor-pointer select-none")}
+            id={todo.id} key ={todo.id + todo.task} value={todo.id} onClick={handleClick}>{todo.task}</p>
+
     )
 }
