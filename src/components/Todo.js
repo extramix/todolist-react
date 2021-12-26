@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Todo({todo, handleToggle}) {
+export default function Todo({todo, handleToggle, handleFilter}) {
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -8,7 +8,7 @@ export default function Todo({todo, handleToggle}) {
     }
     return (
 
-            <p className={(todo.complete? "cursor-pointer line-through text-gray-500 select-none" : "cursor-pointer select-none")}
+            <p className={(todo.complete? "cursor-pointer line-through text-gray-500 select-none hidden" : "cursor-pointer select-none")}
             id={todo.id} key ={todo.id + todo.task} value={todo.id} onClick={handleClick}>{todo.task}</p>
 
     )
